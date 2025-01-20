@@ -1,102 +1,138 @@
+// Import Sass color module
+@use "sass:color";
+
+// Variables
+$primary-color: #0056b3;
+$secondary-color: #f4f4f4;
+$text-color: #333;
+$font-stack: 'Arial, sans-serif';
+$default-padding: 20px;
+
+// Reset
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+// Body
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
+    font-family: $font-stack;
+    background-color: $secondary-color;
+    color: $text-color;
 }
 
-header {
-  background-color: #0056b3;
-  padding: 20px 0;
-  color: white;
-}
-
-header .logo img {
-  width: 150px;
-}
-
-nav ul {
-  list-style-type: none;
-}
-
-nav ul li {
-  display: inline;
-  margin: 0 10px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-main {
-  padding: 20px;
-}
-
-section {
-  margin-bottom: 40px;
-}
-
+// Headings
 h1, h2 {
-  font-size: 2rem;
-  color: #333;
+    color: $text-color;
 }
 
 h1 {
-  margin-bottom: 20px;
+    font-size: 2.5rem;
+    margin-bottom: $default-padding;
 }
 
-p {
-  font-size: 1.1rem;
+h2 {
+    font-size: 2rem;
 }
 
-.feature-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
+// Header styles
+header {
+    background-color: $primary-color;
+    padding: $default-padding 0;
+    color: white;
+
+    .logo {
+        img {
+            width: 150px;
+        }
+    }
+
+    nav {
+        ul {
+            list-style: none;
+
+            li {
+                display: inline-block;
+                margin: 0 10px;
+
+                a {
+                    color: white;
+                    text-decoration: none;
+                    font-size: 18px;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
 }
 
-.feature-item img {
-  width: 150px;
-  margin-right: 20px;
+// Main section styles
+main {
+    padding: $default-padding;
+
+    section {
+        margin-bottom: 40px;
+    }
+
+    #contact {
+        form {
+            display: flex;
+            flex-direction: column;
+
+            label {
+                margin-bottom: 8px;
+            }
+
+            input, textarea {
+                padding: 10px;
+                margin-bottom: 10px;
+                width: 300px;
+            }
+
+            button {
+                padding: 10px 20px;
+                background-color: $primary-color;
+                color: white;
+                border: none;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: color.adjust($primary-color, $lightness: -10%);
+                }
+            }
+        }
+    }
 }
 
-#contact form {
-  display: flex;
-  flex-direction: column;
-}
-
-#contact label {
-  margin-bottom: 8px;
-}
-
-#contact input, #contact textarea {
-  padding: 10px;
-  margin-bottom: 10px;
-  width: 300px;
-}
-
-#contact button {
-  padding: 10px 20px;
-  background-color: #0056b3;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
+// Footer styles
 footer {
-  background-color: #333;
-  color: white;
-  padding: 10px;
-  text-align: center;
+    background-color: $text-color;
+    color: white;
+    padding: 10px;
+    text-align: center;
+
+    p {
+        font-size: 1rem;
+    }
 }
 
-footer p {
-  font-size: 1rem;
+// Feature section styles
+.feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: $default-padding;
+
+    img {
+        width: 150px;
+        margin-right: $default-padding;
+    }
+}
+
+// Mixin for transitions
+@mixin transition($time) {
+    transition: all $time ease-in-out;
 }
