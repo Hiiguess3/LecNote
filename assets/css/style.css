@@ -5,104 +5,172 @@
 }
 
 body {
-  font-family: "Arial, sans-serif";
+  font-family: "Arial", sans-serif;
   background-color: #f4f4f4;
   color: #333;
 }
 
-h1, h2 {
-  color: #333;
-}
-
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-h2 {
-  font-size: 2rem;
+a {
+  text-decoration: none;
 }
 
 header {
-  background-color: #0056b3;
-  padding: 20px 0;
+  background-color: #3498db;
+  padding: 20px;
   color: white;
 }
 header .logo img {
   width: 150px;
 }
-header nav ul {
+header .nav-links {
   list-style: none;
-}
-header nav ul li {
-  display: inline-block;
-  margin: 0 10px;
-}
-header nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-}
-header nav ul li a:hover {
-  text-decoration: underline;
-}
-
-main {
-  padding: 20px;
-}
-main section {
-  margin-bottom: 40px;
-}
-main #contact form {
   display: flex;
-  flex-direction: column;
+  justify-content: flex-end;
 }
-main #contact form label {
-  margin-bottom: 8px;
+header .nav-links li {
+  margin: 0 20px;
+  font-size: 1.1rem;
 }
-main #contact form input, main #contact form textarea {
-  padding: 10px;
-  margin-bottom: 10px;
-  width: 300px;
-}
-main #contact form button {
-  padding: 10px 20px;
-  background-color: #0056b3;
+header .nav-links li a {
   color: white;
-  border: none;
-  cursor: pointer;
+  transition: color 0.3s;
 }
-main #contact form button:hover {
-  background-color: rgb(0, 61.4972067039, 128);
+header .nav-links li a:hover {
+  color: #2ecc71;
 }
 
-footer {
-  background-color: #333;
+.hero {
+  position: relative;
+  text-align: center;
   color: white;
-  padding: 10px;
+}
+.hero .hero-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  opacity: 0.7;
+}
+.hero .hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+.hero .hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+.hero .hero-text p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+.hero .hero-text .btn-primary,
+.hero .hero-text .btn-secondary {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  font-size: 1.1rem;
+}
+.hero .hero-text .btn-primary:hover,
+.hero .hero-text .btn-secondary:hover {
+  background-color: #2ecc71;
+}
+
+.features {
+  padding: 40px;
   text-align: center;
 }
-footer p {
+.features h2 {
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+.features .feature-cards {
+  display: flex;
+  justify-content: space-around;
+}
+.features .feature-cards .card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 30%;
+}
+.features .feature-cards .card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.features .feature-cards .card p {
   font-size: 1rem;
 }
 
-.feature-item {
-  display: flex;
-  align-items: center;
+.testimonials {
+  background-color: #ecf0f1;
+  padding: 40px;
+  text-align: center;
+}
+.testimonials blockquote {
+  font-style: italic;
   margin-bottom: 20px;
+  font-size: 1.2rem;
 }
-.feature-item img {
-  width: 150px;
-  margin-right: 20px;
-}
-
-.some-element {
-  background-color: rgb(0, 61.4972067039, 128);
-  color: rgb(0, 61.4972067039, 128);
+.testimonials span {
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
 }
 
-.another-element {
-  border-color: rgb(0, 61.4972067039, 128);
+.contact {
+  padding: 40px;
+  text-align: center;
+}
+.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact form input, .contact form textarea {
+  width: 60%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.contact form button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+.contact form button:hover {
+  background-color: #2ecc71;
+}
+
+footer {
+  background-color: #3498db;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+footer .social-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+footer .social-links li {
+  margin: 0 10px;
+}
+footer .social-links li a {
+  color: white;
+  transition: color 0.3s;
+}
+footer .social-links li a:hover {
+  color: #2ecc71;
 }
 
 /*# sourceMappingURL=style.css.map */

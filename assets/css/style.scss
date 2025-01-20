@@ -1,148 +1,213 @@
-@use 'sass:color'; // Import the color module
-
 // Variables
-$primary-color: #0056b3;
-$secondary-color: #f4f4f4;
-$text-color: #333;
-$font-stack: 'Arial, sans-serif';
-$default-padding: 20px;
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$background-color: #f4f4f4;
+$font-family: 'Arial', sans-serif;
 
-// Reset
+// Reset & Basic Styles
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-// Body
 body {
-    font-family: $font-stack;
-    background-color: $secondary-color;
-    color: $text-color;
+    font-family: $font-family;
+    background-color: $background-color;
+    color: #333;
 }
 
-// Headings
-h1, h2 {
-    color: $text-color;
+a {
+    text-decoration: none;
 }
 
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: $default-padding;
-}
-
-h2 {
-    font-size: 2rem;
-}
-
-// Header styles
+// Header & Navigation Styles
 header {
     background-color: $primary-color;
-    padding: $default-padding 0;
+    padding: 20px;
     color: white;
 
-    .logo {
-        img {
-            width: 150px;
-        }
+    .logo img {
+        width: 150px;
     }
 
-    nav {
-        ul {
-            list-style: none;
+    .nav-links {
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
 
-            li {
-                display: inline-block;
-                margin: 0 10px;
+        li {
+            margin: 0 20px;
+            font-size: 1.1rem;
 
-                a {
-                    color: white;
-                    text-decoration: none;
-                    font-size: 18px;
-
-                    &:hover {
-                        text-decoration: underline;
-                    }
-                }
-            }
-        }
-    }
-}
-
-// Main section styles
-main {
-    padding: $default-padding;
-
-    section {
-        margin-bottom: 40px;
-    }
-
-    #contact {
-        form {
-            display: flex;
-            flex-direction: column;
-
-            label {
-                margin-bottom: 8px;
-            }
-
-            input, textarea {
-                padding: 10px;
-                margin-bottom: 10px;
-                width: 300px;
-            }
-
-            button {
-                padding: 10px 20px;
-                background-color: $primary-color;
+            a {
                 color: white;
-                border: none;
-                cursor: pointer;
+                transition: color 0.3s;
 
                 &:hover {
-                    background-color: color.adjust($primary-color, $lightness: -10%);
+                    color: $secondary-color;
                 }
             }
         }
     }
 }
 
-// Footer styles
-footer {
-    background-color: $text-color;
+// Hero Section Styles
+.hero {
+    position: relative;
+    text-align: center;
     color: white;
-    padding: 10px;
+
+    .hero-image {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        opacity: 0.7;
+    }
+
+    .hero-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        .btn-primary,
+        .btn-secondary {
+            background-color: $primary-color;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-size: 1.1rem;
+        }
+
+        .btn-primary:hover,
+        .btn-secondary:hover {
+            background-color: $secondary-color;
+        }
+    }
+}
+
+// Features Section Styles
+.features {
+    padding: 40px;
     text-align: center;
 
-    p {
-        font-size: 1rem;
+    h2 {
+        margin-bottom: 40px;
+        font-size: 2rem;
+    }
+
+    .feature-cards {
+        display: flex;
+        justify-content: space-around;
+
+        .card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 30%;
+
+            h3 {
+                font-size: 1.5rem;
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
     }
 }
 
-// Feature section styles
-.feature-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: $default-padding;
+// Testimonials Section Styles
+.testimonials {
+    background-color: #ecf0f1;
+    padding: 40px;
+    text-align: center;
 
-    img {
-        width: 150px;
-        margin-right: $default-padding;
+    blockquote {
+        font-style: italic;
+        margin-bottom: 20px;
+        font-size: 1.2rem;
+    }
+
+    span {
+        display: block;
+        font-weight: bold;
+        margin-top: 10px;
     }
 }
 
-// Mixin for transitions
-@mixin transition($time) {
-    transition: all $time ease-in-out;
+// Contact Section Styles
+.contact {
+    padding: 40px;
+    text-align: center;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        input, textarea {
+            width: 60%;
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: $primary-color;
+            color: white;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $secondary-color;
+            }
+        }
+    }
 }
 
-// Replacing darken() with color.adjust()
-// Here is an example of how you might replace darken calls in your SCSS:
-.some-element {
-    background-color: color.adjust($primary-color, $lightness: -10%);
-    color: color.adjust($primary-color, $lightness: -10%);
-}
+// Footer Styles
+footer {
+    background-color: $primary-color;
+    color: white;
+    padding: 20px;
+    text-align: center;
 
-.another-element {
-    border-color: color.adjust($primary-color, $lightness: -10%);
+    .social-links {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+
+        li {
+            margin: 0 10px;
+
+            a {
+                color: white;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
 }
