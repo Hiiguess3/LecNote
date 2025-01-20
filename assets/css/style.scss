@@ -1,5 +1,4 @@
-// Import Sass color module
-@use "sass:color";
+@use 'sass:color'; // Import the color module
 
 // Variables
 $primary-color: #0056b3;
@@ -135,4 +134,15 @@ footer {
 // Mixin for transitions
 @mixin transition($time) {
     transition: all $time ease-in-out;
+}
+
+// Replacing darken() with color.adjust()
+// Here is an example of how you might replace darken calls in your SCSS:
+.some-element {
+    background-color: color.adjust($primary-color, $lightness: -10%);
+    color: color.adjust($primary-color, $lightness: -10%);
+}
+
+.another-element {
+    border-color: color.adjust($primary-color, $lightness: -10%);
 }

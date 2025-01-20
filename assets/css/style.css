@@ -96,4 +96,13 @@ footer p {
   margin-right: 20px;
 }
 
+.some-element {
+  background-color: rgb(0, 61.4972067039, 128);
+  color: rgb(0, 61.4972067039, 128);
+}
+
+.another-element {
+  border-color: rgb(0, 61.4972067039, 128);
+}
+
 /*# sourceMappingURL=style.css.map */
