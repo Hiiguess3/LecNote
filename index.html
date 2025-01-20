@@ -3,98 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>LecNote - Cutting-Edge Web Solutions</title>
+    <meta name="description" content="Transform your learning with LecNote - the tool that turns lecture recordings into organized, summarized notes and flashcards for fast study.">
+    <title>LecNote - Effortless Note-Taking from Recorded Lectures</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- Navbar -->
     <header>
         <nav>
-            <div class="logo">
-                <img src="assets/images/Logo.png" alt="LecNote Logo">
+            <div class="container">
+                <div class="logo">
+                    <img src="assets/images/Logo.png" alt="LecNote Logo" />
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </div>
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Testimonials</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <img src="assets/images/coffee,notes,laptop,desk.png" alt="Hero Image" class="hero-image">
-        <div class="hero-text">
-            <h1>Transform Your Projects with Cutting-Edge Web Design Solutions</h1>
-            <p>Delivering sleek, professional websites that drive results and wow your audience.</p>
-            <a href="#" class="btn-primary">Get Started Today</a>
-            <a href="#" class="btn-secondary">Explore Portfolio</a>
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1>Transform Your Learning with LecNote</h1>
+            <p>Revolutionize the way you take notes with LecNote. Automatically turn recorded lectures into organized, summarized notes and interactive flashcards for faster learning and better retention.</p>
+            <a href="#features" class="cta-button">Learn More</a>
+        </div>
+        <div class="hero-image">
+            <img src="assets/images/coffee,notes,laptop,desk.png" alt="Student working with LecNote">
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="features">
-        <h2>Why Choose Us?</h2>
-        <div class="feature-cards">
-            <div class="card">
-                <h3>Custom Designs</h3>
-                <p>Every project tailored to your brand’s unique identity.</p>
-            </div>
-            <div class="card">
-                <h3>Fast Turnaround</h3>
-                <p>From concept to launch in days, not weeks.</p>
-            </div>
-            <div class="card">
-                <h3>Proven Results</h3>
-                <p>Boost engagement and conversion rates with professional web solutions.</p>
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Why Choose LecNote?</h2>
+            <div class="feature-cards">
+                <div class="feature-card">
+                    <img src="assets/images/profeessor speaking to lecture.png" alt="Professor Giving a Lecture">
+                    <h3>Effortless Note-Taking</h3>
+                    <p>Our AI-powered platform listens to lectures and transcribes them into clear, concise notes for you to review anytime.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="assets/images/students collaborating.png" alt="Students Collaborating">
+                    <h3>Interactive Flashcards</h3>
+                    <p>Turn your notes into customizable flashcards and quiz yourself to improve retention. Perfect for exam prep!</p>
+                </div>
+                <div class="feature-card">
+                    <img src="assets/images/Flashcards in use.png" alt="Flashcards in Use">
+                    <h3>Instant Summaries</h3>
+                    <p>Summarize long lectures into bite-sized pieces, allowing you to focus on what matters most.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Testimonials Section -->
-    <section class="testimonials">
-        <h2>What Our Clients Say</h2>
-        <div class="testimonials-content">
-            <blockquote>
-                "Their design blew me away. My site traffic tripled in weeks!"<br>
-                <span>- Alex J., Business Owner</span>
-            </blockquote>
-            <blockquote>
-                "A top-notch team. The website is exactly what I envisioned!"<br>
-                <span>- Sarah L., Entrepreneur</span>
-            </blockquote>
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonial-cards">
+                <div class="testimonial-card">
+                    <p>"LecNote has been a game-changer for me. I no longer stress about missing key points during lectures!"</p>
+                    <p>- Alex J., Business Owner</p>
+                </div>
+                <div class="testimonial-card">
+                    <p>"As a busy entrepreneur, LecNote helps me keep track of important lectures and make them work for my business!"</p>
+                    <p>- Sarah L., Entrepreneur</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="contact">
-        <h2>Contact Us</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn-primary">Let’s Talk</button>
-        </form>
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" required placeholder="Enter your message"></textarea>
+                </div>
+                <button type="submit" class="cta-button">Let’s Talk</button>
+            </form>
+        </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 LecNote. All rights reserved.</p>
-        <ul class="social-links">
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">LinkedIn</a></li>
-        </ul>
+        <div class="container">
+            <p>&copy; 2025 LecNote. All rights reserved.</p>
+        </div>
     </footer>
+
 </body>
 </html>
-
-
-
-
-
-
-
-
